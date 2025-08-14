@@ -6,8 +6,5 @@ return {
       "nvim-tree/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
     },
-    config = function()
-      require("neo-tree").setup()
-      vim.keymap.set("n", "<leader>e", "<cmd>Neotree toggle left<cr>", { desc = "Toggle file explorer" })
-    end,
+    lazy = false -- neo-tree can lazy load itself and it is needed at the beginning
 }
